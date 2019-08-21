@@ -1,0 +1,26 @@
+.m-toast{
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+  box-sizing: border-box;
+  &__content{
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    box-shadow: 0 1px 6px rgba(0,0,0,.2);
+    &--info{
+      background-color: #909399;
+    }
+    &--warning{
+      background-color: #E6A23C;
+    }
+    &--success{
+      background-color: #67C23A;
+    }
+    &--fail{
+      background-color: #F56C6C;
+    }
+  }
+}

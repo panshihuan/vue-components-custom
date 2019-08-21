@@ -1,0 +1,27 @@
+.cascade {
+  &__selected {
+    min-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #52d869;
+    &-item {
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      &--active {
+        font: {
+          weight: 700;
+        }
+        color: #52d869;
+      }
+    }
+  }
+  &__items {
+    margin-top: 20px;
+    &-item {
+      padding: 5px 10px;
+    }
+  }
+}

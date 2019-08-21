@@ -1,0 +1,60 @@
+.m-loading{
+  &-container{
+    padding: 0;
+    z-index: 9998;
+    pointer-events: all;
+    .m-toast{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(51,51,51,0.3);
+      &__content{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        padding: 15px 30px;
+        transform: translate(-50%, -50%);
+        background-color: #666;
+      }
+    }
+  }
+  &__circular{
+    height: 50px;
+    width: 50px;
+    animation: loading-rotate 2s linear infinite;
+  }
+  &__path{
+    animation: loading-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+    stroke: #fff;
+    stroke-linecap: round;
+  }
+  &__text{
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
+@keyframes loading-rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -40px;
+  }
+  100% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -120px;
+  }
+}

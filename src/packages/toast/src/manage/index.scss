@@ -1,0 +1,35 @@
+.m-toast{
+  position: absolute;
+  width: 100%;
+  overflow: visible;
+  transition: all .5s;
+  &-container{
+    position: fixed;
+    left: 0;
+    height: 0;
+    width: 100%;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 99999;
+    box-sizing: border-box;
+  }
+  &-multi{
+    .m-toast{
+      position: static;
+      &-enter-active, &-leave-active{
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &-enter, &-leave-to {
+        opacity: 0;
+        transform: translateY(-80%);
+      }
+    }
+  }
+  &-enter-active, &-leave-active{
+    opacity: 1;
+  }
+  &-enter, &-leave-to {
+    opacity: 0;
+  }
+}

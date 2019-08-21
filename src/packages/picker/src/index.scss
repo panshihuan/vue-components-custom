@@ -1,0 +1,70 @@
+@mixin line($position:top, $padding:10px) {
+  position: absolute;
+  content: '';
+  display: block;
+  left: $padding;
+  right: $padding;
+  @if $position == top {
+    top: 0;
+  } @else {
+    bottom: 0;
+  }
+  height: 1px;
+  background-color: #DCDFE6;
+  transform: scaleY(0.5);
+}
+
+.m-picker{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .m-popup__container{
+    height: 270px;
+  }
+  &-header{
+    display: flex;
+    height: 45px;
+    padding: 0 10px;
+    line-height: 45px;
+    &__btn{
+      padding: 0 5px;
+      text-align: left;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    &__title{
+      flex: 1;
+      text-align: center;
+    }
+  }
+  &-body{
+    position: relative;
+    padding: 0 15px;
+    height: 225px;
+    box-sizing: border-box;
+    overflow: hidden;
+    &:before{
+      @include line()
+    }
+  }
+  &-indicator{
+    position: absolute;
+    pointer-events: none;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 45px;
+    transform: translateY(-23px);
+    &:before{
+      @include line(top, 15px)
+    }
+    &:after{
+      @include line(bottom, 15px)
+    }
+  }
+  &-wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+}

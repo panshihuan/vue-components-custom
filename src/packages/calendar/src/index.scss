@@ -1,0 +1,38 @@
+.m-calendar{
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    user-select: none;
+  }
+}
+.m-monthly{
+  td,th {
+    height: 40px;
+    padding: 4px 0;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+  }
+  &__month{
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 16px;
+    clear: both;
+  }
+  &__dates{
+    td{
+      color: #333;
+      &.selected{
+        background: #4289ff;
+        color: #fff;
+      }
+      &.range{
+        background: #EBF4FA;
+      }
+      &.expired{
+        color: #cfcfcf;
+      }
+    }
+  }
+}

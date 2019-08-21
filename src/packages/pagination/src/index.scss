@@ -1,0 +1,19 @@
+.m-pagination{
+  li{
+    list-style: none;
+    display: inline-block;
+  }
+  &__item{
+    border:1px solid #999;
+    padding: 2px 12px;
+    border-radius: 6px;
+  }
+  &__tag{
+    margin: 0 10px;
+  }
+  &--active{
+    color: #fff;
+    background: blue;
+    border-color: blue;
+  }
+}

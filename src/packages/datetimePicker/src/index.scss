@@ -1,0 +1,56 @@
+.m-datepicker{
+  width: 100%;
+  .mx-input-wrapper{
+    .mx-input{
+      border-radius: 0;
+    }
+  }
+  &--time-hour-only{
+
+  }
+  &--hide-header{
+    .mx-calendar-header{
+      display: none;
+    }
+  }
+  &--MONTH.m-datepicker-disabled--year{
+    .mx-calendar-header{
+      display: none;
+    }
+  }
+  &--DATE.m-datepicker-disabled--year{
+    .mx-icon-next-year,
+    .mx-icon-last-year,
+    .mx-current-year{
+      display: none;
+    }
+  }
+  &--DATE.m-datepicker-disabled--prevMonth{
+    .mx-icon-last-month{
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+  &--DATE.m-datepicker-disabled--nextMonth{
+    .mx-icon-next-month{
+      visibility: hidden;
+      pointer-events: none;
+    }
+  }
+  &--DATE.m-datepicker-disabled--month{
+    .mx-calendar-header{
+      display: none;
+    }
+  }
+  &--TIME.m-datepicker-disabled--minute{
+    .mx-calendar-content{
+      width: 160px;
+    }
+    .mx-time-list{
+      width: 100% !important;
+    }
+    .mx-time-list~.mx-time-list{
+      display: none !important;
+    }
+  }
+}

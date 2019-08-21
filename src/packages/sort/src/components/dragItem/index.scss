@@ -1,0 +1,6 @@
+.sort-item{
+  &--dragging{
+    pointer-events: none;
+    opacity: .5;
+  }
+}
